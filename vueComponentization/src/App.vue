@@ -1,0 +1,3 @@
+<template>
+  hello啊
+</template>
