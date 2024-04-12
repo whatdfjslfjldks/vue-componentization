@@ -1,60 +1,31 @@
 <template>
-<div style="width:200px;height:200px;border:1px solid red" @contextmenu.prevent="rightClick"></div>
-
-<div class="box1">
-  this is box1
-  <ContextMenu :menu="[
-    {label:'test1'},
-    {label:'test2'},
-  ]">
-<div class="inner">222</div>
-  </ContextMenu>
-</div>
-<div class="box2">
-this is box2
-<!-- <ContextMenu :menu="[
-    {label:'test1'},
-    {label:'test2'},
-  ]">
-  sdafdf
-  </ContextMenu> -->
-<div class="box3">
-  this is box3
-  <!-- <ContextMenu :menu="[
-    {label:'test1'},
-    {label:'test2'},
-  ]">
-  </ContextMenu> -->
-</div>
-</div>
+<ContextMenu :menu="[
+  {label:'test1'},
+  {label:'test2'},
+  {label:'test3'},
+  {label:'test4'}
+  ]" @menu-item-clicked="handleMenuItemClicked">
+<div class="test">这是一个右键菜单</div>
+</ContextMenu>
 </template>
 <script>
 import ContextMenu from "./components/ContextMenu.vue";
 export default{
-  methods:{
-    rightClick (MouseEvent) {
-        console.log("鼠标右击事件",MouseEvent)
-    },
-  },
+  methods: {
+  handleMenuItemClicked(selectedContent) {
+    // 在这里获取到选中的内容，可以对其进行进一步处理
+    console.log('选中的内容：', selectedContent);
+  }
+},
   components:{
     ContextMenu,
   }
 }
 </script>
-<style>
-.box1{
-  width: 200px;
-  height: 200px;
-  background-color: red;
-}
-.box2{
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-}
-.box3{
+<style scoped>
+.test{
   width: 100px;
   height: 100px;
-  background-color: darkkhaki;
+  background-color: red;
 }
 </style>
