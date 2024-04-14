@@ -23,4 +23,27 @@
 #### 解题代码：
 [医院设置问题1、2](../vue-componentization/vueComponentization/src/utils/subjectDoctor.js)
 
+#### 4. 国王游戏问题
+问题描述：国王邀请n位大臣玩一个游戏。首先，他让每个大臣在左、右手上面分别写下一个整数，国王自己也在左、右手上各写一个整数。然后，让这n位大臣排成一排，国王站在队伍的最前面。排好队后，所有的大臣都会获得国王奖赏的若干金币，每位大臣获得的金币数分别是：排在该大臣前面的所有人的左手上的数的乘积除以他自己右手上的数，然后向下取整得到的结果。
+国王不希望某一个大臣获得特别多的奖赏，所以他想请你帮他重新安排一下队伍的顺序，使得获得奖赏最多的大臣，所获奖赏尽可能的少。注意，国王的位置始终在队伍的最前面。
+#### 解题代码：
+[国王游戏问题](../vue-componentization/vueComponentization/src/utils/subjectKingGame.js)
 
+#### 5. 看比赛问题
+问题描述：有n场直播比赛，每场比赛的开始、结束时间已知，求最多可以看多少场比赛。每场比赛从开头完整看到结尾才算观看完一场比赛。
+#### 解题代码：
+[看比赛问题](../vue-componentization/vueComponentization/src/utils/subjectWatchTV.js)
+
+#### 6. 果子合并问题
+问题描述：现有n堆果子，每一堆果子有一个质量wi，现要把所有果子按照如下规则合并成一堆：
+(1)	每次只能选择某两堆合并成一堆；
+(2)	每次合并消耗体力值为两堆果子质量之和；
+(3)	问合并成一堆所花费的最小体力值是多少。
+#### 解题代码：
+[果子合并问题](../vue-componentization/vueComponentization/src/utils/subjectAppleMerge.js)
+
+#### 7. 排队打水问题
+问题描述：有 n 个人排队到 1 个水龙头处打水，第 i 个人装满水桶所需的时间是 Ti，请问如何安排他们的打水顺序才能使所有人的平均等待时间最小？
+输入：第一行包含整数n； 第二行包含n个整数，其中第i个整数表示第i个人装满水桶所花费的时间Ti。
+#### 解题代码：
+[排队打水问题](../vue-componentization/vueComponentization/src/utils/subjectWater.js)
