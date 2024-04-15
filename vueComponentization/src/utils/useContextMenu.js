@@ -1,11 +1,10 @@
-import { onMounted,onUnmounted, ref,watchEffect } from "vue"
-
-export function useContextMenu(container:any) {
+import {ref} from "vue"
+export function useContextMenu(container) {
     const x = ref(0);
     const y = ref(0);
     const visible = ref(false);
 
-    function showMenu(e:any){
+    function showMenu(e){
         e.preventDefault();
         e.stopPropagation();
         x.value=e.clientX;

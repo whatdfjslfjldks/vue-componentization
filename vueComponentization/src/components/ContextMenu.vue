@@ -24,7 +24,7 @@ export default {
   props: {
     // 接受菜单项作为 prop
     menu: {
-      type: Array,
+      type: Object,
       default: () => []
     }
   },
