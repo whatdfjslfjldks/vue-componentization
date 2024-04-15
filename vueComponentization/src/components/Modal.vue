@@ -7,14 +7,12 @@
  <div class="content">{{ content }}</div>
  <div class="footer">
     <button @click.stop="visible=false">确定!</button>
-    
  </div>
 </div>
 </div>
 </template>
 <script>
-import {ref} from 'vue';
-import {useModal} from "../utils/useModal";
+import {ref,watch,watchEffect} from 'vue';
 export default{
     props:{
         title:{
@@ -29,12 +27,19 @@ export default{
             type:Number,
         }
     },
-    setup(){
-        const container = ref(null)
+    setup(props){
+        // const container = ref(null)
         const visible=ref(false)
-        // const visible=useModal(container.value)
+        console.log(props.duration)
+        watchEffect(()=>{
+            if(visible.value && props.duration!==undefined){
+                console.log("enter");
+                setTimeout(() => {
+                    visible.value=false
+                }, props.duration);
+            }
+        })
         return {
-            container,
             visible
         }
     }

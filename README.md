@@ -8,6 +8,13 @@
 2. 菜单的内容
 3. 菜单的样式
 4. 菜单出现的动画（0->auto用css动画无法显示，需要知道具体的height）
+### 已解决的问题
+1. 右键菜单不显示，右键被浏览器右键占用，在使用onMounted组件挂载时，重复使用了，将js代码中onMounted删去，解决问题
+2. 菜单出现的动画，动态获取菜单的高度
+```javascript
+ el.style.height = "auto"; // 设置高度为自动以便获取高度
+  const h = el.clientHeight;
+```
 ### 地址
 [ContextMenu](./vueComponentization/src/components/ContextMenu.vue)
 
@@ -18,6 +25,12 @@
 3. 弹窗里需要有什么内容（标题title，内容content，确认和取消按钮button）
 4. 弹窗出现时界面的行为（阻止用户与界面其他部分交互，直到弹窗关闭）->解决办法：使用遮罩层
 5. 持续时间（如果是提示类弹窗，则需设置持续时间）
+### 已解决的问题
+1. 注意到事件的冒泡处理顺序，使用@click.stop阻止冒泡，修复bug
+2. 小细节错误，是否为undefined的判断，应该直接与undefined比较，而不是字符串'undefined'
+### 地址
+[Modal](./vueComponentization/src/components/Modal.vue)
+
 ## 三、轮播图封装
 
 

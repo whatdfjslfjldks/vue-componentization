@@ -8,7 +8,8 @@
 <div class="test">这是一个右键菜单</div>
 </ContextMenu>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<Modal :title="'弹窗'" :content="'是否关闭？'">
+<Modal :title="'弹窗'" :content="'是否关闭？'"
+ >
 <div class="test">这是一个弹窗</div>
 </Modal>
   <!-- <div v-if="result">
