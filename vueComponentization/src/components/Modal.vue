@@ -6,7 +6,8 @@
  <div class="title">{{ title }}</div>
  <div class="content">{{ content }}</div>
  <div class="footer">
-    <button @click.stop="visible=false">确定</button>
+    <button @click.stop="visible=false">确定!</button>
+    
  </div>
 </div>
 </div>
